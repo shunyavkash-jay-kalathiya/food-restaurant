@@ -5,12 +5,6 @@
   line-height: 0.9;
   font-weight: 600;
 }
-
-.richtext:has(p) {
-  font-size: 18px;
-  line-height: 1;
-  color: var(--p);
-}
   .toggle-menu {
     display: none;
   }
@@ -19,6 +13,12 @@
   }
 }
 @media (max-width: 1023px) {
+    h1,
+.h1 {
+  font-size: 80px;
+  line-height: 0.9;
+  font-weight: 600;
+}
   .toggle-menu {
     display: block;
   }
@@ -66,6 +66,19 @@
   }
 }
 @media (max-width: 767px) {
+    h1,
+.h1 {
+  font-size: 60px;
+  line-height: 0.9;
+  font-weight: 600;
+}
+.hero-flex{
+    height: 100%;
+}
+.header-number{
+    display: none;
+}
 }
 @media (max-width: 575px) {
+
 }
