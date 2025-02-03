@@ -182,8 +182,23 @@
         </section>
         <section>
             <div class="container">
-                <div class="">
-
+            <div class="card-menu">
+                <div class="food-card-img">
+                    <img src="./assest/images/french-fry-img.png" alt="french-fry">
+                </div>
+            </div>
+                <div class="splide card-slidr" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide ">
+                               <div class="card-menu">
+                                <div class="food-card-img">
+                                    <img src="./assest/images/french-fry-img.png" alt="french-fry">
+                                </div>
+                               </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -210,13 +225,41 @@
         document.addEventListener("DOMContentLoaded", function () {
             var splide = new Splide(".text-slider-main", {
                 type: "loop",
+                perPage: 4,
+                arrows: false,
+                 interval: 5000,
+                pauseOnHover: false,
+                pagination: false,
+                gap: "10px",
+                autoScroll: {
+                    speed: 1,
+                },
+                breakpoints: {
+                    1000: {
+                        perPage: 3,
+                    },
+                    640: {
+                        perPage: 2,
+                    },
+                    400: {
+                        perPage: 2,
+                    },
+                }
+            });
+            splide.mount(window.splide.Extensions);
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var splide = new Splide(".", {
+                type: "loop",
                 perPage: 3,
                 arrows: false,
                 pagination: false,
                 focus: "center",
-                gap: "1em",
+                gap: "20px",
                 autoScroll: {
-                    speed: 2,
+                    speed: 1,
                 },
                 breakpoints: {
                     1000: {

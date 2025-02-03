@@ -244,3 +244,10 @@ header {
 .star-slide{
     width: 50px;
 }
+
+.text-slider-main:hover {
+  pointer-events: none;
+}
+.card-menu{
+    background-image: url(../images/catagory-card-shape.jpg);
+}
