@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>food side</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="./assest/css/fonts.css">
     <link rel="stylesheet" href="./assest/css/style.css">
     <link rel="stylesheet" href="./assest/css/media.css">
-    <title>food side</title>
 </head>
 
 <body>
@@ -109,7 +110,6 @@
                         </svg>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
@@ -118,17 +118,17 @@
             <div class="container">
                 <div class="hero-flex">
                     <div class="hero-items">
-                            <h3 class="title-sec">crispy, every bite taste</h3>
-                            <h1 class="hero-title"> delicious food near your town</h1>
-                            <a href="jacascript:void(0)"></a>
-                            <a href="javascript:void(0)" class="btn btn-primary">Book now
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-right-lines">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-3v-6h3z" />
-                                    <path d="M3 9v6" />
-                                    <path d="M6 9v6" />
-                                </svg>
-                            </a>
+                        <h3 class="title-sec">crispy, every bite taste</h3>
+                        <h1 class="hero-title"> delicious food near your town</h1>
+                        <a href="jacascript:void(0)"></a>
+                        <a href="javascript:void(0)" class="btn btn-primary">Book now
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-right-lines">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-3v-6h3z" />
+                                <path d="M3 9v6" />
+                                <path d="M6 9v6" />
+                            </svg>
+                        </a>
                     </div>
                     <div class="hero-img">
                         <div class="hero-pizza-img">
@@ -138,10 +138,61 @@
                 </div>
             </div>
         </section>
+        <section class="sec-padding">
+            <div class="splide text-slider-main" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide ">
+                            <h3 class="h2 combined">
+                                burger king
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                            </h3>
+                        </li>
+                        <li class="splide__slide">
+                            <h3 class="h2 combined">
+                                delicious foods
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                            </h3>
+                        </li>
+                        <li class="splide__slide ">
+                            <h3 class="h2 combined">
+                                Italian pizza
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                        </li>
+                        <li class="splide__slide ">
+                            <h3 class="h2 combined">
+                                burger king
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                            </h3>
+                        </li>
+                        <li class="splide__slide">
+                            <h3 class="h2 combined">
+                                delicious foods
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                            </h3>
+                        </li>
+                        <li class="splide__slide ">
+                            <h3 class="h2 combined">
+                                Italian pizza
+                                <img src="./assest/images/star.svg" alt="star" class="star-slide">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="">
+
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <!-- <script>
         $(document).ready(function () {
             $(window).resize(function () {
                 if ($(window).width() > 1024) {
@@ -153,6 +204,33 @@
             $(".toggle-menu").click(function () {
                 $(".toggle-item").slideToggle("slow");
             });
+        });
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var splide = new Splide(".text-slider-main", {
+                type: "loop",
+                perPage: 3,
+                arrows: false,
+                pagination: false,
+                focus: "center",
+                gap: "1em",
+                autoScroll: {
+                    speed: 2,
+                },
+                breakpoints: {
+                    1000: {
+                        perPage: 4,
+                    },
+                    640: {
+                        perPage: 4,
+                    },
+                    400: {
+                        perPage: 3,
+                    },
+                }
+            });
+            splide.mount(window.splide.Extensions);
         });
     </script>
 </body>
