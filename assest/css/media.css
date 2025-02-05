@@ -5,6 +5,14 @@
   .menu-close {
     display: none;
   }
+ .menu-list:hover .menu-svg {
+  transform: rotateX(180deg);
+}
+.delivery-man{
+  position: absolute;
+  top: -44px;
+  right: 0;
+}
 }
 @media (max-width: 1023px) {
   h1,
@@ -21,7 +29,7 @@ h2,
 h3,
 .h3 {
   font-size: 26px;
-  line-height: 1;
+  line-height: 1.2;
 }
 h4,
 .h4 {
@@ -45,7 +53,7 @@ p .p {
 
 .richtext:has(p) {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--p);
 }
 
@@ -63,28 +71,38 @@ p .p {
     background-color: var(--white);
   }
   .menu-item {
+    gap: 0;
     flex-direction: column;
+     justify-content: end;
+    align-items: start;
   }
   .menu-list {
     width: 100%;
+    padding: 20px 0;
+    flex-wrap: wrap;
     justify-content: space-between;
     color: var(--black);
     border-bottom: 1px solid var(--black);
   }
+  .menu-svg{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+  .menu-svg svg{
+    width: 20px;
+  }
   .menu-name {
     color: var(--black);
-  }
-  .menu-item {
-    justify-content: end;
-    align-items: start;
   }
   .menu-close {
     display: block;
     margin-left: auto;
   }
-  .dropdown-menu {
+  .dropdown-div{
+    width: 100%;
     position: static;
-    display: none;
+    /* display: none; */
   }
   .hero-flex {
     flex-direction: column;
@@ -100,6 +118,20 @@ grid-template-columns: repeat(1, 1fr);
   }
 .blog-grid{
   grid-template-columns: repeat(2 ,1fr);
+}
+.cta-item {
+    padding: 64px 62px;
+}
+.delivery-man{
+  position: absolute;
+  right: 0;
+  height: 330px;
+  width: 300px;
+   bottom: 0;
+}
+.delivery-man img{
+  height: 100%;
+  width: 100%;
 }
 }
 @media (max-width: 767px) {
@@ -118,7 +150,7 @@ h2,
 h3,
 .h3 {
   font-size: 24px;
-  line-height: 1;
+  line-height: 1.2;
 }
 h4,
 .h4 {
@@ -137,15 +169,22 @@ h6,
 }
 p .p {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 .richtext:has(p) {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.4;
   color: var(--p);
 }
+
+.btn{
+  padding: 14px 20px;
+}
+
 .hero-flex{
+  justify-content: center;
+        min-height: 500px;
     height: 100%;
 }
 .header-number{
@@ -153,6 +192,22 @@ p .p {
 }
 .food-card-sec .splide__arrows{
   display: none;
+}
+.contact-from-grid{
+  grid-template-columns: repeat(1 , 1fr);
+}
+.delivery-man{
+display: none;
+}
+.cta-text{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+}
+.cta-title{
+max-width: 100%;
+text-align: center;
 }
 }
 @media (max-width: 575px) {
@@ -170,7 +225,7 @@ h2,
 h3,
 .h3 {
   font-size: 26px;
-  line-height: 1;
+  line-height: 1.2;
 }
 h4,
 .h4 {
@@ -189,13 +244,13 @@ h6,
 }
 p .p {
   font-size: 18px;
-  line-height: 1;
+   line-height: 1.4;
 }
 
 .richtext:has(p) {
   font-size: 18px;
   line-height: 1;
-  color: var(--p);
+  line-height: 1.4;
 }
 .blog-grid{
   grid-template-columns: repeat(1 ,1fr);
