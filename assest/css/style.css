@@ -743,4 +743,9 @@ footer{
 .footer-grid{
   display: grid;
   grid-template-columns: repeat(7 ,1fr);
+  padding: 100px 0;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
