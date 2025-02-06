@@ -2,7 +2,7 @@
   .toggle-menu {
     display: none;
   }
-  
+
   .menu-close {
     display: none;
   }
@@ -26,6 +26,7 @@
     }
   }
 }
+
 @media (max-width: 1023px) {
   h1,
   .h1 {
@@ -188,6 +189,7 @@
     grid-column: 1/3;
   }
 }
+
 @media (max-width: 767px) {
   h1,
   .h1 {
