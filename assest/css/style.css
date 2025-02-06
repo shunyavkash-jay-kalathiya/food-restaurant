@@ -54,7 +54,8 @@ h6,
   line-height: 1;
 }
 
-p, .p {
+p,
+.p {
   font-size: 18px;
   line-height: 1;
 }
@@ -287,6 +288,7 @@ header {
   background-image: url(../images/hero-bg.jpg);
   background-size: cover;
   height: 100vh;
+  position: relative;
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -326,19 +328,7 @@ header {
   max-width: 300px;
   max-height: 200px;
   transform: rotate(0deg);
-  animation: combo-rotate 3s ease-in-out 0.5s infinite;
-}
-
-@keyframes bouncing-img-hero {
-  0%,
-  100% {
-    transform: translateY(-10%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
+  animation: combo-rotate 4s infinite alternate forwards;
 }
 
 @keyframes combo-rotate {
@@ -380,11 +370,34 @@ header {
   right: 0;
   height: 100%;
   width: 100%;
-  max-width: 218px;
-  max-height: 160px;
+  max-width: 184px;
+  max-height: 112px;
+  animation: offer-shape 2s infinite alternate forwards;
 }
 
-.offer-shape img {
+@keyframes offer-shape {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+.chilli-shape-2 {
+  position: absolute;
+  right: 0;
+  top: 12%;
+}
+.chilli-shape-3{
+  position: absolute;
+  right: 0;
+bottom: 12%;
+}
+
+.offer-shape img,.chilli-shape-3 img,
+.chilli-shape-2 img {
   width: 100%;
   height: 100%;
 }
