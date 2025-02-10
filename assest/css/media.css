@@ -433,14 +433,17 @@
     max-width: 150px;
     max-height: 124px;
   }
+
   .offer-shape {
     max-width: 132px;
     max-height: 96px;
   }
+
   .pizza-two {
     max-width: 106px;
     max-height: 94px;
   }
+  
   .tomato-shape-2{
     display: none;
   }

@@ -23,11 +23,13 @@ h1,
   font-size: 130px;
   line-height: 0.9;
   font-weight: 600;
+  color: var(--black);
 }
 
 h2,
 .h2 {
   font-size: 70px;
+  color: var(--black);
   line-height: 1;
 }
 
@@ -35,24 +37,28 @@ h3,
 .h3 {
   font-size: 28px;
   line-height: 1.2;
+  color: var(--black);
 }
 
 h4,
 .h4 {
   font-size: 20px;
   line-height: 1;
+  color: var(--black);
 }
 
 h5,
 .h5 {
   font-size: 18px;
   line-height: 1;
+  color: var(--black);
 }
 
 h6,
 .h6 {
   font-size: 16px;
   line-height: 1;
+  color: var(--black);
 }
 
 p,
@@ -156,14 +162,56 @@ p,
   background-color: var(--black);
 }
 
+.main-title {
+  margin-bottom: 30px;
+}
+
 .header {
-  padding: 30px 0;
   transition: all 0.4s ease-in-out;
   position: fixed;
   z-index: 9;
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.second-header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color);
+  transition: all 0.4s ease-in-out;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.second-header .dropdown-div {
+  top: 80%;
+}
+.second-header .header-number,
+.second-header .header-search,
+.second-header .header-cart,
+.second-header .menu-name {
+  color: black;
+}
+.second-header-change {
+  transition: all 0.4s ease-in-out;
+  padding: 12px;
+  box-shadow: 0px 15px 10px -15px var(--white);
+  width: 100%;
+  z-index: 9;
+  background-color: var(--black);
+}
+.second-header-change .header-number,
+.second-header-change .header-search,
+.second-header-change .menu-name,
+.second-header-change .menu-svg,
+.second-header-change .header-cart {
+  color: var(--white);
+}
+.menu-svg {
+  color: var(--black);
 }
 
 .header-change {
@@ -199,12 +247,17 @@ p,
 }
 
 .menu-name {
+  padding: 36px 0;
   color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
   line-height: 0.8;
+}
+
+.header .menu-svg svg {
+  color: var(--white);
 }
 
 .contacts-header {
@@ -719,7 +772,7 @@ p,
   width: 100%;
   max-width: 173px;
   max-height: 76px;
-  animation: combo-rotate 4s infinite alternate forwards
+  animation: combo-rotate 4s infinite alternate forwards;
 }
 .burger-text img {
   height: 100%;
@@ -1115,9 +1168,14 @@ option {
 .cta-title span {
   color: var(--black);
 }
+[type="date"] {
+  background: url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  88% 50% no-repeat ;
+}
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
@@ -1256,33 +1314,89 @@ footer {
 }
 
 /* inner-hero */
-.inner-hero-sec{
+.inner-hero-sec {
   background-image: url(../images/inner-hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 120px 0 100px 0 ;
+  padding: 120px 0 100px 0;
 }
-.inner-hero-title{
+.inner-hero-title {
   color: var(--white);
+  text-transform: uppercase;
   text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
 }
-.breadcrumb-items{
+.breadcrumb-items {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.breadcrumb-name{
-  text-transform:uppercase;
+.breadcrumb-name {
+  text-transform: uppercase;
   color: var(--primary);
   text-decoration: none;
 }
-.breadcrumb-icon svg{
+.breadcrumb-icon svg {
   width: 30px;
   fill: none;
   color: var(--primary);
+}
+
+/* .team-card-sec */
+.team-card-sec {
+  background-color: var(--bg-color);
+}
+.team-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  max-height: 436px;
+  max-width: 346px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.team-social-link {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 40%;
+  z-index: 2;
+  background-color: var(--security);
+  padding: 6px;
+}
+
+.team-social-link::before {
+  content: "";
+}
+
+.team-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.team-post {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-weight: 500;
+}
+.team-name {
+  font-weight: 700;
 }
